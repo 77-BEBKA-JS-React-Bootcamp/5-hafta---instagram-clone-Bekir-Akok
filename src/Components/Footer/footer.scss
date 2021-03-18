@@ -1,0 +1,35 @@
+.footer{
+    height: 50px;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+
+    .footer__icons{
+        max-width: 30%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(240,240,240 , 0.5);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .footer__icons{
+      max-width: 70%;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    .footer__icons{
+      max-width: 90%;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .footer__icons{
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0;
+    }
+  }
