@@ -29,7 +29,7 @@ const Home = props => {
         props.getCommentsActions()
     }, [])
 
-     const splicePost = props.comments.reverse().splice(0, 2) 
+     const filteredPost = props.comments.filter(y => y.id <= 2 || y.id === 101) 
 
     return (
         <div className="post__card">
@@ -73,7 +73,7 @@ const Home = props => {
                             <h6>{post.user.username}</h6>
                             <p>{post.description === null ? 'Empty description...' : post.description}</p>
                             <div className="comments__main">
-                                {splicePost.map((comment , i) => (
+                                {filteredPost.map((comment , i) => (
                                     <div className="comments__flex" key={i}>
                                         <h6>JonhDoe{comment.id}</h6>
                                         <p>{comment.title}</p>
